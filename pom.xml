@@ -27,8 +27,16 @@
             <programs>
               <program>
                 <mainClass>crawler.example.integration.FBElasticImport</mainClass>
-                <id>FBElasticImport</id>
+                <id>fbElasticImport</id>
               </program>
+              <program>
+                  <mainClass>crawler.example.integration.PM25ElasticImport</mainClass>
+                  <id>pm25ElasticImport</id>
+              </program>
+                <program>
+                    <mainClass>crawler.example.integration.PM25ElasticImport</mainClass>
+                    <id>pm25import</id>
+                </program>
             </programs>
           </configuration>
         </plugin>           
