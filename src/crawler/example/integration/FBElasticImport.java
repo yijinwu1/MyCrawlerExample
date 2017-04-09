@@ -16,7 +16,7 @@ public class FBElasticImport {
     static String elasticIndexType = "data";
     static String pageName = "crazyck101";
     static long start = 1491696000;
-    static int days = 30;
+    static int days = 1;
 
     public static void main(String[] args) {
 
@@ -63,12 +63,9 @@ public class FBElasticImport {
                             ",\"message\":\"" + message + "\"" +
                             ",\"likes\":" + likes +
                             ",\"id\":\"" + id + "\"" +
-<<<<<<< HEAD
                             ",\"pagename\":\"" + pageName + "\"" +
                             ",\"comments\":" + comments +
-=======
-                            ",\"comments\":\"" + comments + "\"" +
->>>>>>> origin/master
+
                             "}";
 
 
