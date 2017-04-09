@@ -6,7 +6,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 /**
- * Created by Student on 2016/7/10.
+ * Created by Abola Lee on 2016/7/10.
  */
 public class FBElasticImport {
 
@@ -14,14 +14,19 @@ public class FBElasticImport {
     static String elasticPort = "9200" ;
     static String elasticIndex = "fb";
     static String elasticIndexType = "data";
-
+    static String pageName = "crazyck101";
+    static long start = 1491696000;
+    static int days = 30;
 
     public static void main(String[] args) {
-        for (long dt = 1491004800; dt > 1485907200; dt-=7200) {
+
+        for (long datatime = start ; datatime > start-86400*days ;datatime-=3600*8) {
             String uri =
                     "https://graph.facebook.com/v2.6"
-                            + "/YahooTWNews/feed?fields=message,comments.limit(0).summary(true),likes.limit(0).summary(true),created_time&since="+(dt-7200)+"&until="+dt+"&limit=100"
-                            + "&access_token=<<<YOUR_APP_TOKEN>>>";
+                            + "/"+pageName +"/feed?fields=message,comments.limit(0).summary(true),likes.limit(0).summary(true),created_time&since="+(datatime-3600*8)+"&until="+datatime+"&limit=100"
+                            + "&access_token=1870269386570971%7Ca56e5d8da03af405aefa5f37ced6f623";
+
+
 
             try {
 
@@ -58,7 +63,12 @@ public class FBElasticImport {
                             ",\"message\":\"" + message + "\"" +
                             ",\"likes\":" + likes +
                             ",\"id\":\"" + id + "\"" +
+<<<<<<< HEAD
+                            ",\"pagename\":\"" + pageName + "\"" +
+                            ",\"comments\":" + comments +
+=======
                             ",\"comments\":\"" + comments + "\"" +
+>>>>>>> origin/master
                             "}";
 
 
