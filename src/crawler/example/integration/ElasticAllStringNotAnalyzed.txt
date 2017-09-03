@@ -1,0 +1,24 @@
+{
+        "order": 0,
+        "template": "*",
+        "settings": {
+            "index.number_of_shards": "1"
+        },
+        "mappings": {
+            "_default_": {
+                "dynamic_templates": [
+                    {
+                        "string": {
+                            "mapping": {
+                                "index": "not_analyzed",
+                                "type": "string"
+                            },
+                            "match_mapping_type": "string"
+                        }
+                    }
+                ]
+            }
+        },
+        "aliases": {}
+    }
+}
