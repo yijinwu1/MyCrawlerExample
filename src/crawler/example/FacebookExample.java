@@ -23,7 +23,7 @@ public class FacebookExample {
 		
 		// 遠端資料路徑
 		// [query sample]
-		// search?fields=name,id,likes,talking_about_count&limit=1000&q=靠北&type=page   // %E9%9D%A0%E5%8C%97
+		// search?fields=name,id,likes,talking_about_count&limit=1000&q=靠北&type=page   // 中文 urlencode
 		String uri = 
 				"https://graph.facebook.com/v2.5"
 				+ "/search?q=TPEC%E6%95%99%E7%A0%94%E4%B8%AD%E5%BF%83&type=page&limit=1000&fields=name,id,likes,talking_about_count"
