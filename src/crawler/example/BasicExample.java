@@ -20,6 +20,7 @@ public class BasicExample {
 		CrawlerPack.setLoggerLevel(SimpleLog.LOG_LEVEL_OFF);
 
 		// 遠端資料路徑
+
 		String uri = "https://pm25.lass-net.org/data/last-all-airbox.json";
 
 		System.out.println(
