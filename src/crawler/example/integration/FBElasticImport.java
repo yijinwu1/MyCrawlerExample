@@ -12,16 +12,17 @@ public class FBElasticImport {
 
     static String elasticHost = "dyn.gibar.co" ;
     static String elasticPort = "9200" ;
-    static String elasticIndex = "abola2";
+    static String elasticIndex = "yijinwu1"; // TableName
     static String elasticIndexType = "data";
-    static String pageName = "JudgeAd";
-    // 2017-09-02
-    static long start = 1504363907;
+    static String pageName = "KDnuggets"; //粉絲團名稱
+    // 2017-12-10  Timestamp
+    static long start = 1512871822;
     // 往前抓抓取日期數
-    static int days = 10;
+    static int days = 20;
     // 每日抓取文章上限 (上限1000)
     static int maxPosts = 10;
-    static String access_token = "EAACEdEose0cBAAuJhUlaZCuuqYnzXXXKPGY7Es4KZCLBLpnrIdCWjutfSl1AFZAdR3pFnF6PdrfmaU2EwyllSxhKAd7ZCIGfxZCeg8VkdspelNr9vVWIZCeBRnU5KUlZAPh9zamyT836FmdCadDfzwFILwR6hdMse7irLpIto5cnUnqSV4MtEAA2Hf8slFdXZBS489aSanZCYLAZDZD";
+    // Token.
+    static String access_token = "EAACEdEose0cBACklRCWHN2nwHMaT7PnA9yaZCQrxwjTDqZCFkUU19zVE0NeWCnsPkfBywRPjj5wrrGedV0g2ec8S9apGtpomiE7ZBMZBiwV2CstULe4Fs0Uu3cDg62DdONSThXNtFQlQqfS37bKJFKmBYZCdCwCl7FhMq9BXNqTvw6NnYPbrVGHcjnnPHW3oqaMw2Wok9CAZDZD";
 
     public static void main(String[] args) {
 
