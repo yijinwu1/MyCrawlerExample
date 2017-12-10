@@ -14,22 +14,22 @@ public class FBElasticImport {
     static String elasticPort = "9200" ;
     static String elasticIndex = "yijinwu1"; // TableName
     static String elasticIndexType = "data";
-    static String pageName = "KDnuggets"; //粉絲團名稱
+    static String pageName = "ASUS"; //粉絲團名稱
     // 2017-12-10  Timestamp
     static long start = 1512871822;
     // 往前抓抓取日期數
     static int days = 20;
     // 每日抓取文章上限 (上限1000)
-    static int maxPosts = 10;
+    static int maxPosts = 20;
     // Token.
-    static String access_token = "EAACEdEose0cBACklRCWHN2nwHMaT7PnA9yaZCQrxwjTDqZCFkUU19zVE0NeWCnsPkfBywRPjj5wrrGedV0g2ec8S9apGtpomiE7ZBMZBiwV2CstULe4Fs0Uu3cDg62DdONSThXNtFQlQqfS37bKJFKmBYZCdCwCl7FhMq9BXNqTvw6NnYPbrVGHcjnnPHW3oqaMw2Wok9CAZDZD";
+    static String access_token = "EAACEdEose0cBAF9rS2UD8U3btwjpZC9yWC0U16XEh2YVjzodkmjPi2wqaNaEZBBGu7C2r2Db03IUeuGJNYRe0tuOwZCldxqQ5dpd2I7XtfcRqCf8zjE975Dgc72GqWQP6nDDzcQ6R3gddvZA5OZAekYpLxqgp8OiuFstls6fQB6Dg1qei00NVcgj4simAJQxyZAOLQZA4wftgZDZD";
 
     public static void main(String[] args) {
 
         for (long datatime = start ; datatime > start-86400*days ;datatime-=86400) {
             String uri =
                     "https://graph.facebook.com/v2.6"
-                            + "/"+pageName +"/posts?fields=message,comments.limit(0).summary(true),likes.limit(0).summary(true),created_time&since="+(datatime-3600*8)+"&until="+datatime+"&limit="+maxPosts
+                            + "/"+pageName +"/posts?fields=message,comments.limit(0).summary(true),likes.limit(0).summary(true),created_time&since="+(datatime-3600*24)+"&until="+datatime+"&limit="+maxPosts
                             + "&access_token="+access_token;
 
 
