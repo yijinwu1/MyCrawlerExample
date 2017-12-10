@@ -25,8 +25,8 @@ public class FacebookExam {
 
 		String uri = 
 				"https://graph.facebook.com/v2.6"
-				+ "/search?q="
-				+ "&access_token=";
+				+ "/KDnuggets/posts?fields=id,link,message,created_time,likes.limit(0).summary(total_count),reactions.limit(0).summary(total_count)"
+				+ "&access_token=EAACEdEose0cBACklRCWHN2nwHMaT7PnA9yaZCQrxwjTDqZCFkUU19zVE0NeWCnsPkfBywRPjj5wrrGedV0g2ec8S9apGtpomiE7ZBMZBiwV2CstULe4Fs0Uu3cDg62DdONSThXNtFQlQqfS37bKJFKmBYZCdCwCl7FhMq9BXNqTvw6NnYPbrVGHcjnnPHW3oqaMw2Wok9CAZDZD";
 
 
 		Elements elems =
@@ -41,7 +41,7 @@ public class FacebookExam {
 			String id = data.select("id").text();
 
 			// FIXIT
-			String reactions = "";
+			String reactions = data.select("reactions summary total_count").text();
 
 
 			output += id + "," + reactions + "\n";
